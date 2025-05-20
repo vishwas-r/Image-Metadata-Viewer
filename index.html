@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Metadata Viewer</title>
+
+    <!-- Meta Tags for SEO and Social Sharing -->
+    <meta name="description" content="View and analyze image metadata including EXIF, GPS, and other properties.">
+    <meta name="author" content="Vishwas R">
+    <meta name="keywords" content="image metadata, EXIF, GPS, image viewer, metadata viewer">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph (OG) Tags for Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Image Metadata Viewer">
+    <meta property="og:description" content="View and analyze image metadata including EXIF, GPS, and other properties.">
+    <meta property="og:image" content="assets/icon.png">
+    <meta property="og:url" content="https://github.com/vishwas-r/">
+    <meta property="og:site_name" content="Image Metadata Viewer">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Image Metadata Viewer">
+    <meta name="twitter:description" content="View and analyze image metadata including EXIF, GPS, and other properties.">
+    <meta name="twitter:image" content="assets/icon.png">
+    <meta name="twitter:creator" content="@vishwasr_">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <link rel="apple-touch-icon" href="assets/icon.png">
+
+    <!-- External Styles and Scripts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/exif-js/2.3.0/exif.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+
+
+</head>
+
+<body>
+	<header>
+		<h1><i class="fas fa-image"></i> Image Metadata Viewer</h1>
+	</header>
+
+	<main>
+		<div class="upload-container">
+			<div class="dropzone" id="dropzone">
+				<i class="fas fa-cloud-upload-alt"></i>
+				<p>Drag & drop your image here or click to select</p>
+				<button class="btn" id="selectFileBtn">Select Image</button>
+				<input type="file" id="fileInput" accept="image/*">
+			</div>
+		</div>
+
+		<div class="metadata-container hidden" id="metadataContainer">
+			<div class="image-container">
+				<div class="image-preview">
+					<img id="imagePreview" src="">
+				</div>
+				<div class="basic-info">
+					<h3>Image Information</h3>
+					<div class="basic-info-list" id="basicInfo">
+						<!-- Basic image info will be populated here -->
+					</div>
+				</div>
+			</div>
+
+			<div class="info-section" id="infoSection">
+				<div id="metadataLoader" class="loader"></div>
+				<!-- Metadata sections will be populated here -->
+			</div>
+		</div>
+
+		<div id="mapContainer" class="hidden">
+			<div class="map-title">
+				<h3>Location</h3>
+			</div>
+			<div id="map"></div>
+		</div>
+	</main>
+
+	<footer>
+		<p>© 2025 | <a href="https://vishwas.me/" class="text-white" target="_blank">Vishwas R</a></p>
+	</footer>
+	<script src="assets/script.js"></script>
+</body>
+
+</html>
